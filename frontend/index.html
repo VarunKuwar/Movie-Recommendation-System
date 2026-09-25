@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMatch | AI Movie Recommendations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1 class="glow-text">CineMatch.</h1>
+            <p class="subtitle">Discover your next obsession using Content-Based Filtering.</p>
+        </header>
+
+        <section class="search-section glass-panel">
+            <div class="input-group">
+                <label for="movie-select">Select a Movie You Liked</label>
+                <select id="movie-select" class="glass-select">
+                    <option value="" disabled selected>Loading movies...</option>
+                </select>
+                <button id="recommend-btn" class="glow-button">Get Recommendations</button>
+            </div>
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Analyzing cinematic universes...</p>
+            </div>
+        </section>
+
+        <section id="results-section" class="results-section hidden">
+            <div class="selected-movie-info glass-panel">
+                <h2>Because you liked <span id="liked-movie-title" class="highlight"></span></h2>
+                <div class="movie-meta" id="liked-movie-meta"></div>
+            </div>
+            
+            <h3 class="section-title">Recommended for you</h3>
+            <div class="recommendations-grid" id="recommendations-grid">
+                <!-- Movie cards injected here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
